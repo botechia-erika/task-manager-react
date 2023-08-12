@@ -5,13 +5,11 @@ const GlobalStyle = createGlobalStyle`
 @import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
 
 
-  box-sizing: border-box;
-  margin: 0;
-  padding:0;
+
   
   :root{
-   --blah-light: #7adfff;
-   --blah-color: #7adfff;
+    --blue-light: #7adfff;
+   --blah-default: #7adfff;
    --blah-light: #ccffff;
    --blah-dark: #0196fd;
    --positive-default: #53D769;
@@ -20,9 +18,8 @@ const GlobalStyle = createGlobalStyle`
    --negative-dark: E33437;
    --light-default: #F8F8F8;
    --light-dark: #E6E6E6;
-   --dark-default: #262626;
-   --dark-dark: #000000;
-
+   --black-default: #262626;
+   --black-dark: #000000;
   }
 
 /* GLOBAL STYLES */
@@ -54,6 +51,7 @@ button {
 }
 button:hover {
   color: var(--blah-light);
+  color: black;
 }
 
 .App {

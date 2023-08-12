@@ -1,9 +1,11 @@
 import {useState} from 'react'
 
 import { SidebarContainer } from './styledSidebar'
-export function Sidebar ({icon1, notes}) {
+export function Sidebar ({icon1, notes, handleAddNote}) {
   const [ownersName, setOwnersName] = useState("BLÁHPad")
-  const handleAdd = () => {}
+
+
+
 
   const handleCancel = ()=>{}
 return (
@@ -13,7 +15,7 @@ return (
           <img src={icon1} alt={"LOGO ICON da BLÁHPad"} />
           {ownersName}
       </h1>
-      <button onClick={handleAdd()}>
+      <button onClick={handleAddNote()}>
           <span>
               <i className="fa-solid fa-circle-plus" ></i>
           </span>
@@ -24,16 +26,16 @@ return (
       {notes.map((note, indice)=>(
 <div className='app-sidebar-note' key={note.id}>
     <div className='sidebar-note-title'>
-      <strong>BLÁHNotes</strong>
+      <strong>#0{note.id}:{note.title}</strong>
       <button onClick={handleCancel()}> 
         <span>
         <i className="fa-solid fa-circle-xmark"></i>
         </span>  CancelaBLÁH
       </button>
     </div>
-      <p>{note.title}</p>
+      <p> {note.body}</p>
       <small className='note-meta'>
-        Last update [data]
+        {note.lastUpdate}
       </small>
       </div>
       ))
