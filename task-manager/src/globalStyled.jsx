@@ -4,14 +4,28 @@ import { createGlobalStyle } from 'styled-components';
 const GlobalStyle = createGlobalStyle`
 @import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
 
-* {
-  box-sizing: border-box;
-}
+
+
+  
+  :root{
+    --blue-light: #7adfff;
+   --blah-default: #7adfff;
+   --blah-light: #ccffff;
+   --blah-dark: #0196fd;
+   --positive-default: #53D769;
+   --positive-dark: #46C263;
+   --negative-default: #FC3D39;
+   --negative-dark: E33437;
+   --light-default: #F8F8F8;
+   --light-dark: #E6E6E6;
+   --black-default: #262626;
+   --black-dark: #000000;
+  }
 
 /* GLOBAL STYLES */
 
 body,
-.App {
+.app {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   width: 100%;
@@ -20,7 +34,11 @@ body,
   font-size: 16px;
   background: url(https://www.toptal.com/designers/subtlepatterns/patterns/lightpaperfibers.png);
 }
-
+h1 img{
+  width: 40px;
+  height: 40px;
+display:inline-block;
+}
 button {
   background: none;
   border: 0;
@@ -29,10 +47,11 @@ button {
   font-size: inherit;
   font-family: inherit;
   cursor: pointer;
-  color: #08c;
+  color:var(--blah-default);
 }
 button:hover {
-  color: #04c;
+  color: var(--blah-light);
+  color: black;
 }
 
 .App {
