@@ -12,13 +12,23 @@ const dataNotes = [
     body: "minha nova nota"
   }
 ]
+
+
 export function App() {
+const [blahNote, setBlahNote] = useState({id: 0, title: "", body: "", createdAt: "", updateAt: ""})
 const [notes, setNotes]= useState([])
 const icon=i001
 const onAddNote = ()=>{
 console.log('add note')
-
-
+const newBlah = {
+  id:"n"+ Date.now(),
+  title: "",
+  body: "",
+  createdAt: "",
+  updateAt: ""
+}
+setBlahNote(newBlah)
+console.log(newBlah)
 }
 
 
