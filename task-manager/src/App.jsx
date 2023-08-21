@@ -13,10 +13,10 @@ const dataNotes = [
   }
 ]
 export function App() {
-const [notes, setNotes]= useState([...dataNotes])
+const [notes, setNotes]= useState([])
 const icon=i001
-const handleAddNote = (notes)=>{
-
+const onAddNote = ()=>{
+console.log('add note')
 
 
 }
@@ -29,7 +29,7 @@ const handleAddNote = (notes)=>{
         <Sidebar
         icon1={icon}
         notes={notes}
-        handleAddNote={()=>handleAddNote()}
+        onAddNote={()=>{onAddNote()}}
         />
         <AppRouter/>
         </div>

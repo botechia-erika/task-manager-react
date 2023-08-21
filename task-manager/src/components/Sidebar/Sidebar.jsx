@@ -1,7 +1,7 @@
 import {useState} from 'react'
 
 import { SidebarContainer } from './styledSidebar'
-export function Sidebar ({icon1, notes, handleAddNote}) {
+export function Sidebar ({icon1, notes, onAddNote}) {
   const [ownersName, setOwnersName] = useState("BLÁHPad")
 
 
@@ -15,7 +15,7 @@ return (
           <img src={icon1} alt={"LOGO ICON da BLÁHPad"} />
           {ownersName}
       </h1>
-      <button onClick={handleAddNote()}>
+      <button onClick={()=>{onAddNote()}}>
           <span>
               <i className="fa-solid fa-circle-plus" ></i>
           </span>
